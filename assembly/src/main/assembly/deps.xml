@@ -1,0 +1,91 @@
+<assembly>
+  <id>bin</id>
+  <formats>
+    <format>zip</format>
+  </formats>
+  <includeBaseDirectory>false</includeBaseDirectory>
+  <fileSets>
+    <!-- testwar -->
+    <fileSet>
+      <outputDirectory>/modules/org/jboss/integrationplatform/fsw/test/main</outputDirectory>
+      <directory>src/main/modules</directory>
+    </fileSet>
+  </fileSets>
+  <dependencySets>
+    <!-- testwar -->
+    <dependencySet>
+      <outputDirectory>/modules/org/jboss/integrationplatform/fsw/test/main</outputDirectory>
+      <useProjectArtifact>false</useProjectArtifact>
+      <includes>
+        <include>org.jboss.integrationplatform.fsw.test:testwar</include>
+      </includes>
+      <outputFileNameMapping>${artifact.artifactId}.${artifact.extension}</outputFileNameMapping>
+    </dependencySet>
+
+    <!-- configuration module -->
+    <dependencySet>
+      <outputDirectory>/modules/org/jboss/integrationplatform/fsw/configuration/main</outputDirectory>
+      <useProjectArtifact>false</useProjectArtifact>
+      <includes>
+        <include>org.jboss.integration-platform:fsw-config-module</include>
+      </includes>
+    </dependencySet>
+    <dependencySet>
+      <outputDirectory>/modules/org/jboss/integrationplatform/fsw/configuration/main</outputDirectory>
+      <useProjectArtifact>false</useProjectArtifact>
+      <includes>
+        <include>org.jboss.integration-platform:fsw-config-module</include>
+      </includes>
+      <unpack>true</unpack>
+      <unpackOptions>
+        <includes>
+          <include>module.xml</include>
+        </includes>
+      </unpackOptions>
+    </dependencySet>
+
+    <!-- configuration extension -->
+    <dependencySet>
+      <outputDirectory>/modules/org/jboss/integrationplatform/fsw/extension/configuration/main</outputDirectory>
+      <useProjectArtifact>false</useProjectArtifact>
+      <includes>
+        <include>org.jboss.integration-platform:fsw-config-extension</include>
+      </includes>
+    </dependencySet>
+    <dependencySet>
+      <outputDirectory>/modules/org/jboss/integrationplatform/fsw/extension/configuration/main</outputDirectory>
+      <useProjectArtifact>false</useProjectArtifact>
+      <includes>
+        <include>org.jboss.integration-platform:fsw-config-extension</include>
+      </includes>
+      <unpack>true</unpack>
+      <unpackOptions>
+        <includes>
+          <include>module.xml</include>
+        </includes>
+      </unpackOptions>
+    </dependencySet>
+
+    <!-- deployment extension -->
+    <dependencySet>
+      <outputDirectory>/modules/org/jboss/integrationplatform/fsw/extension/deployment/main</outputDirectory>
+      <useProjectArtifact>false</useProjectArtifact>
+      <includes>
+        <include>org.jboss.integration-platform:fsw-deployment-extension</include>
+      </includes>
+    </dependencySet>
+    <dependencySet>
+      <outputDirectory>/modules/org/jboss/integrationplatform/fsw/extension/deployment/main</outputDirectory>
+      <useProjectArtifact>false</useProjectArtifact>
+      <includes>
+        <include>org.jboss.integration-platform:fsw-deployment-extension</include>
+      </includes>
+      <unpack>true</unpack>
+      <unpackOptions>
+        <includes>
+          <include>module.xml</include>
+        </includes>
+      </unpackOptions>
+    </dependencySet>
+  </dependencySets>
+</assembly>
